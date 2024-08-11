@@ -1,6 +1,5 @@
 import streamlit as st
 
-# Set up the page configuration
 st.set_page_config(
     page_title="محتار في تخصصك الجامعي؟",
     page_icon="📊",
@@ -8,14 +7,13 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Add custom CSS to support RTL text and enhance the styling
 st.markdown(
     """
     <style>
     body, html {
         direction: rtl;
         text-align: right;
-        font-family: 'Cairo', sans-serif; /* Ensure a font that supports Arabic well */
+        font-family: 'Cairo', sans-serif; 
     }
     .main {
         background-color: #f8f9fa;
@@ -29,7 +27,7 @@ st.markdown(
     .content {
         font-size: 1.2em;
         color: #444444;
-        line-height: 1.8; /* Increased line height for better readability */
+        line-height: 1.8; 
         margin: 20px 0;
     }
     .footer {
@@ -51,7 +49,6 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Optionally add a dropdown list for more interactive data exploration
 option = st.selectbox(
     'اختر تصنيف البيانات لعرضها:',
     ('الوظائف الأكثر طلبًا', 'متوسط الرواتب', 'نوع الشركات', 'توزيع المناطق'),
@@ -69,7 +66,6 @@ elif option == 'توزيع المناطق':
 
 st.markdown('في النهاية أتمنى إني ساعدتك في اختيار تخصصك الجامعي بناءً على الوظائف الأكثر طلبًا 😉')
 
-# Conclusion
 st.markdown("""
 <div class="footer">
 © 2024 Hatoon Aloqialy
